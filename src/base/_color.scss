@@ -1,0 +1,38 @@
+
+// Color
+//
+// Color generates various general purpose classes for styling elements.
+// 
+// Markup: _color.html
+//
+// Style guide: base
+@if $sy-color-enabled {
+  @each $name, $palette in $sy-color {
+    @each $step, $color in $palette {
+      .sy-text-#{$name}-#{$step} {
+        color: $color;
+      }
+      .sy-#{$name}-#{$step} {
+        background-color: $color;
+      }
+    }
+  }
+  .sy-text-white {
+    color: #fff;
+  }
+  .sy-white {
+    background-color: #fff;
+  }
+  .sy-text-black {
+    color: #000;
+  }
+  .sy-black {
+    background-color: #000;
+  }
+  .sy-text-transparent {
+    color: transparent;
+  }
+  .sy-transparent {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,49 @@
+////
+/// @author [Syndesi](https://syndesi.de/)
+////
+
+
+@if $sy-container-enabled {
+  .sy-container {
+    width: 100%;
+    padding-right: $sy-container-default-gap * 0.5;
+    padding-left: $sy-container-default-gap * 0.5;
+    margin-right: auto;
+    margin-left: auto;
+    @each $breakpoint, $container-max-width in $sy-container-max-width {
+      @include sy-media-breakpoint-up($breakpoint) {
+        max-width: $container-max-width;
+      }
+    }
+    @each $gap-name, $gap-width in $sy-grid-gap {
+      &.sy-gap#{sy-grid-gap-infix($gap-name)} {
+        padding-right: $gap-width * 0.5;
+        padding-left: $gap-width * 0.5;
+      }
+    }
+  }
+}
+
+@if $sy-grid-enabled {
+  .sy-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: $sy-grid-default-gap * -0.5;
+    margin-left: $sy-grid-default-gap * -0.5;
+    > * {
+      padding-right: $sy-grid-default-gap * 0.5;
+      padding-left: $sy-grid-default-gap * 0.5;
+    }
+    @each $gap-name, $gap-width in $sy-grid-gap {
+      &.sy-gap#{sy-grid-gap-infix($gap-name)} {
+        margin-right: $gap-width * -0.5;
+        margin-left: $gap-width * -0.5;
+        > * {
+          padding-right: $gap-width * 0.5;
+          padding-left: $gap-width * 0.5;
+        }
+      }
+    }
+  }
+  @include sy-make-grid-columns();
+}

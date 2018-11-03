@@ -1,0 +1,17 @@
+////
+/// @author [Bootstrap 4](https://getbootstrap.com/)
+/// @link https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_clearfix.scss
+////
+
+
+/// A clearfix is a way for an element to automatically clear its child elements, so that you don't need to add additional markup.
+/// It's generally used in float layouts where elements are floated to be stacked horizontally.
+/// The clearfix is a way to combat the zero-height container problem for floated elements
+/// @link https://stackoverflow.com/a/8554054/4417327
+@mixin sy-clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

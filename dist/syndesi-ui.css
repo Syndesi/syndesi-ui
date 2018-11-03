@@ -1,0 +1,4 @@
+@import url(~normalize.css/normalize.css);
+.demo {
+  border-bottom: 2px solid red;
+  padding: 0; }
