@@ -1,3 +1,19 @@
+// Typography
+//
+// The typographic elements like headers, paragraphs etc. are styled by default
+// and can be aligned with special classes.
+// 
+// Markup:
+// <h1>Heading 1</h1>
+// <h2>Heading 2</h2>
+// <h3>Heading 3</h3>
+// <h4>Heading 4</h4>
+// <h5>Heading 5</h5>
+// <h6>Heading 6</h6>
+// <p>Paragraph</p>
+// <p class="sy-text-mono">.sy-text-mono</p>
+// 
+// Style guide: 1.2
 
 body {
   font-family: $sy-font-family;
@@ -30,6 +46,23 @@ p {
 .sy-text-mono {
   font-family: $sy-font-family-mono;
 }
+
+// Alignment
+//
+// Text elements can be aligned with the following classes:
+// 
+// - `.sy-text-start`: Text is aligned to the left (default) or right (rtl).
+// - `.sy-text-center`: Text is aligned to the center.
+// - `.sy-text-end`: Text is aligned to the right (default) or left (rtl).
+// - `.sy-text-justify`: Text fills all available space.
+// - `.sy-text-justify-all`: Like `.sy-text-justify-all`, but the last line is justified too.
+// - `.sy-text-match-parent`: Matches the alignment of its parent.
+// - `.sy-rtl`: Text flows from right to left.
+// - `.sy-ltr`: Text flows from left to right (default).
+// 
+// Markup: _typography.html
+// 
+// Style guide: 1.2.1
 
 .sy-text-start {
   text-align: left;

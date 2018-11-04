@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="./syndesi-ui.css">
+  <link rel="stylesheet" href="http://localhost:8080/syndesi-ui.css">
 
 </head>
-<body id="kss-node" >
+<body id="kss-node" class="kss-fullscreen-mode">
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
@@ -27,8 +27,8 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-1.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Base</span>
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">base</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -42,27 +42,38 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-hard-rule" class="kss-section kss-section--depth-1 ">
+    <div id="kssref-base-color" class="kss-section kss-section--depth-2 is-fullscreen">
 
       <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-hard-rule">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-color">
             <span class="kss-title__ref">
-              2
+              1.1
               <span class="kss-title__permalink-hash">
-                  #hard-rule
+                  #base.color
               </span>
             </span>
-            Demo
+            Color
           </a>
-        </h1>
+        </h2>
 
 
+          <div class="kss-description">
+            <p>Like in Google's material ui, colors are grouped in palettes by hue. Each
+contains 9 different shades, ranging from <code>100</code> (lightest) over <code>500</code> (base
+color) up to <code>900</code> (darkest).</p>
+<p>Some special colors as <code>white</code>, <code>black</code> and <code>transparent</code> are included too,
+even though they don't have palettes on their own.</p>
+
+          </div>
 
 
       </div>
 
 
+        <div class="kss-source kss-style">
+          Source: <code>base/_color.scss</code>, line 2
+        </div>
 
     </div>
 </article>

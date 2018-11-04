@@ -1,7 +1,26 @@
-////
-/// @author [Syndesi](https://syndesi.de/)
-////
+// Grid
+//
+// The grid component provides several classes to build responsive layouts from
+// the ground up.
+// 
+// Style guide: 1.4
 
+
+// Container
+//
+// The container is the main wrapper for the content and is centered. It accepts
+// the optional class `.sy-gap-{size}` with sizes from `0` to `5` which changes
+// its padding.
+// 
+// **May be removed in the future** (no additional functionality over
+// `.sy-px-{size}`)
+// 
+// Markup:
+// <div class="sy-container sy-gap-3 sy-blue-500">
+//   <p class="sy-blue-400">Content</p>
+// </div>
+// 
+// Style guide: 1.4.1
 
 @if $sy-container-enabled {
   .sy-container {
@@ -23,6 +42,40 @@
     }
   }
 }
+
+// Row
+//
+// The row fills the whole horizontal space and can be splitted by columns. Like
+// the container, rows can accept the optional class `.sy-gap-{size}` in order
+// to provide different gap sizes.
+// 
+// Markup:
+// <div class="sy-row">
+//   <div class="sy-col">
+//     <p class="sy-blue-500">Column A</p>
+//   </div>
+//   <div class="sy-col">
+//     <p class="sy-blue-500">Column B</p>
+//   </div>
+//   <div class="sy-col">
+//     <p class="sy-blue-500">Column C</p>
+//   </div>
+// </div>
+// 
+// Style guide: 1.4.2
+
+// Column
+//
+// In contrast to the row can the column be filled with content and is
+// responsible for its own width. The class is defined as `.sy-col-{width}`,
+// whereas the width ranges from `1` (1/12 = 8.3%) to `12` (12/12 = 100%).
+// When no width is defined (e.g. `.sy-col`), the column will use as much space
+// as possible and can therefore be used for divisions with the same width, e.g.
+// 5 columns with equal width in a single row.
+// 
+// Markup: _grid.html
+// 
+// Style guide: 1.4.3
 
 @if $sy-grid-enabled {
   .sy-row {
@@ -47,3 +100,11 @@
   }
   @include sy-make-grid-columns();
 }
+
+// Missing
+// 
+// - offset
+// - -auto
+// - order
+// 
+// Style guide: 1.4.4

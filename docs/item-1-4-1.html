@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./syndesi-ui.css">
 
 </head>
-<body id="kss-node" >
+<body id="kss-node" class="kss-fullscreen-mode">
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
@@ -42,26 +42,57 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-hard-rule" class="kss-section kss-section--depth-1 ">
+    <div id="kssref-1-4-1" class="kss-section kss-section--depth-3 is-fullscreen">
 
       <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-hard-rule">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-1-4-1">
             <span class="kss-title__ref">
-              2
+              1.4.1
               <span class="kss-title__permalink-hash">
-                  #hard-rule
+                  #1.4.1
               </span>
             </span>
-            Demo
+            Container
           </a>
-        </h1>
+        </h3>
 
 
+          <div class="kss-description">
+            <p>The container is the main wrapper for the content and is centered. It accepts
+the optional class <code>.sy-gap-{size}</code> with sizes from <code>0</code> to <code>5</code> which changes
+its padding.</p>
+<p><strong>May be removed in the future</strong> (no additional functionality over
+<code>.sy-px-{size}</code>)</p>
+
+          </div>
 
 
       </div>
 
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="sy-container sy-gap-3 sy-blue-500">
+  <p class="sy-blue-400">Content</p>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+            <details class="kss-markup kss-style">
+              <summary>
+                  Markup
+              </summary>
+              <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sy-container sy-gap-3 sy-blue-500"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sy-blue-400"</span>&gt;</span>Content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+            </details>
 
 
     </div>

@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="./syndesi-ui.css">
+  <link rel="stylesheet" href="http://localhost:8080/syndesi-ui.css">
 
 </head>
-<body id="kss-node" >
+<body id="kss-node" class="kss-fullscreen-mode">
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
@@ -42,26 +42,54 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-hard-rule" class="kss-section kss-section--depth-1 ">
+    <div id="kssref-1-2-2" class="kss-section kss-section--depth-3 is-fullscreen">
 
       <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-hard-rule">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-1-2-2">
             <span class="kss-title__ref">
-              2
+              1.2.2
               <span class="kss-title__permalink-hash">
-                  #hard-rule
+                  #1.2.2
               </span>
             </span>
-            Demo
+            Padding
           </a>
-        </h1>
+        </h3>
 
 
+          <div class="kss-description">
+            <p>Padding classes are defined as <code>.sy-p{direction}-{size}</code>. The size ranges from
+<code>0</code> (smallest) up to <code>5</code> (biggest).</p>
+
+          </div>
 
 
       </div>
 
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <p class="sy-px-0 sy-pb-3 sy-blue-500 sy-text-mono">sy-px-0 sy-pb-3</p>
+<p class="sy-px-5 sy-blue-500 sy-text-mono">sy-px-5</p>
+<p class="sy-px-0 sy-pt-3 sy-blue-500 sy-text-mono">sy-px-0 sy-pt-3</p>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+            <details class="kss-markup kss-style">
+              <summary>
+                  Markup
+              </summary>
+              <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sy-px-0 sy-pb-3 sy-blue-500 sy-text-mono"</span>&gt;</span>sy-px-0 sy-pb-3<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sy-px-5 sy-blue-500 sy-text-mono"</span>&gt;</span>sy-px-5<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sy-px-0 sy-pt-3 sy-blue-500 sy-text-mono"</span>&gt;</span>sy-px-0 sy-pt-3<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code></pre>
+            </details>
 
 
     </div>

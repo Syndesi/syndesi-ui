@@ -79,7 +79,10 @@ development = {
         'http://localhost:8080/syndesi-ui.css'
       ],
       title: "syndesi-ui",
-      builder: "./docsTheme"
+      builder: "./docsTheme/",
+      custom: [
+        "hidemarkup"
+      ]
     })
   ]
 };
@@ -93,7 +96,10 @@ production = {
         './syndesi-ui.css'
       ],
       title: "syndesi-ui",
-      builder: "./docsTheme"
+      builder: "./docsTheme/",
+      custom: [
+        "hidemarkup"
+      ]
     })
   ]
 };
