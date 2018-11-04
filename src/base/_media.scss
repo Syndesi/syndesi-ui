@@ -1,0 +1,54 @@
+
+
+@if $sy-media-enabled {
+  .sy-media {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    & > * {
+      position: absolute;
+    }
+
+    @each $name, $ratio in $sy-media-ratio {
+      &.sy-ratio-#{$name} {
+        padding-top: #{$ratio};
+      }
+    }
+  }
+
+  .sy-media-content {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @each $size, $offset in $sy-media-offset {
+    .sy-ot-#{$size} {
+      top: $offset;
+    }
+    .sy-or-#{$size} {
+      right: $offset;
+    }
+    .sy-ob-#{$size} {
+      bottom: $offset;
+    }
+    .sy-ol-#{$size} {
+      left: $offset;
+    }
+    .sy-ox-#{$size} {
+      left: $offset;
+      right: $offset;
+    }
+    .sy-oy-#{$size} {
+      top: $offset;
+      bottom: $offset;
+    }
+    .sy-o-#{$size} {
+      top: $offset;
+      right: $offset;
+      bottom: $offset;
+      left: $offset;
+    }
+  }
+}
