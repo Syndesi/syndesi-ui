@@ -1,0 +1,70 @@
+
+body {
+  font-family: $sy-font-family;
+  overflow-x: hidden;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: map-get($sy-fontsize, heading-#{$i});
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $sy-fontweight-heading;
+  line-height: $sy-lineheight-heading;
+  margin: 0px 0px 0.5rem 0px;
+  padding: 0px;
+  text-align: start;
+}
+
+p {
+  font-size: map-get($sy-fontsize, paragraph);
+  font-weight: $sy-fontweight-paragraph;
+  line-height: $sy-lineheight-paragraph;
+  margin: 0px 0px 0.5rem 0px;
+  padding: 0px;
+  text-align: justify;
+}
+
+.sy-text-mono {
+  font-family: $sy-font-family-mono;
+}
+
+.sy-text-start {
+  text-align: left;
+  text-align: start;
+}
+
+.sy-text-center {
+  text-align: center;
+}
+
+.sy-text-end {
+  text-align: right;
+  text-align: end;
+}
+
+.sy-text-justify {
+  text-align: justify;
+}
+
+.sy-text-justify-all {
+  text-align: justify;
+  text-align: justify-all;
+}
+
+.sy-text-match-parent {
+  text-align: inherit;
+  text-align: match-parent;
+}
+
+.sy-rtl,
+.sy-rtl * {
+  direction: rtl;
+}
+
+.sy-ltr,
+.sy-ltr * {
+  direction: ltr;
+}

@@ -1,0 +1,9 @@
+@function sy-grid-gap-infix($name) {
+  @if map-has-key($sy-grid-gap, $name) {
+    @if map-get($sy-grid-gap, $name) == null {
+      @return "";
+    }
+    @return -#{$name};
+  }
+  @return "unknown";
+}

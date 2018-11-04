@@ -1,0 +1,73 @@
+
+
+@if $sy-margin-enabled {
+  @each $size, $margin in $sy-margin {
+    .sy-mt-#{$size} {
+      margin-top: $margin;
+    }
+    .sy-mr-#{$size} {
+      margin-right: $margin;
+    }
+    .sy-mb-#{$size} {
+      margin-bottom: $margin;
+    }
+    .sy-ml-#{$size} {
+      margin-left: $margin;
+    }
+    .sy-mx-#{$size} {
+      margin-left: $margin;
+      margin-right: $margin;
+    }
+    .sy-my-#{$size} {
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+    .sy-m-#{$size} {
+      margin: $margin;
+    }
+  }
+}
+
+@if $sy-padding-enabled {
+  @each $size, $padding in $sy-padding {
+    .sy-pt-#{$size} {
+      padding-top: $padding;
+    }
+    .sy-pr-#{$size} {
+      padding-right: $padding;
+    }
+    .sy-pb-#{$size} {
+      padding-bottom: $padding;
+    }
+    .sy-pl-#{$size} {
+      padding-left: $padding;
+    }
+    .sy-px-#{$size} {
+      padding-left: $padding;
+      padding-right: $padding;
+    }
+    .sy-py-#{$size} {
+      padding-top: $padding;
+      padding-bottom: $padding;
+    }
+    .sy-p-#{$size} {
+      padding: $padding;
+    }
+  }
+}
+
+@if $sy-width-enabled {
+  @each $size, $width in $sy-width {
+    .sy-w-#{$size} {
+      width: $width;
+    }
+  }
+}
+
+@if $sy-height-enabled {
+  @each $size, $height in $sy-height {
+    .sy-h-#{$size} {
+      height: $height;
+    }
+  }
+}
