@@ -42,41 +42,85 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-1-2" class="kss-section kss-section--depth-2 is-fullscreen">
+    <div id="kssref-1-3-1" class="kss-section kss-section--depth-3 is-fullscreen">
 
       <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-1-2">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-1-3-1">
             <span class="kss-title__ref">
-              1.2
+              1.3.1
               <span class="kss-title__permalink-hash">
-                  #1.2
+                  #1.3.1
               </span>
             </span>
-            Layout
+            Alignment
           </a>
-        </h2>
+        </h3>
 
 
           <div class="kss-description">
-            <p>Like Bootstrap Syndesi-UI uses standartized classes for layout propertys like
-margin, padding and element sizes.</p>
-<p>The code was adapted from the <a href="https://getbootstrap.com/docs/4.1/utilities/spacing/">Bootstrap project</a>.</p>
-<p>The used directions are as follows:</p>
+            <p>Text elements can be aligned with the following classes:</p>
 <ul>
-<li><code>t</code> for top</li>
-<li><code>r</code> for right</li>
-<li><code>b</code> for bottom</li>
-<li><code>l</code> for left</li>
-<li><code>x</code> for x-axis (both left and right)</li>
-<li><code>y</code> for y-axis (both top and bottom)</li>
-<li><code></code> (nothing) for all 4 directions</li>
+<li><code>.sy-text-start</code>: Text is aligned to the left (default) or right (rtl).</li>
+<li><code>.sy-text-center</code>: Text is aligned to the center.</li>
+<li><code>.sy-text-end</code>: Text is aligned to the right (default) or left (rtl).</li>
+<li><code>.sy-text-justify</code>: Text fills all available space.</li>
+<li><code>.sy-text-justify-all</code>: Like <code>.sy-text-justify-all</code>, but the last line is justified too.</li>
+<li><code>.sy-text-match-parent</code>: Matches the alignment of its parent.</li>
+<li><code>.sy-rtl</code>: Text flows from right to left.</li>
+<li><code>.sy-ltr</code>: Text flows from left to right (default).</li>
 </ul>
 
           </div>
 
 
       </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="sy-row sy-gap-2">
+    <div class="sy-col">
+        <p class="sy-text-start sy-blue-500">Start</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-center sy-blue-500">Center</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-end sy-blue-500">End</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-justify sy-blue-500">Justify</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-justify-all sy-blue-500">Justify-all</p>
+    </div>
+</div>
+<div class="sy-row sy-gap-2 sy-rtl">
+    <div class="sy-col">
+        <p class="sy-text-start sy-red-500">Start RTL</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-center sy-red-500">Center RTL</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-end sy-red-500">End RTL</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-justify sy-red-500">Justify RTL</p>
+    </div>
+    <div class="sy-col">
+        <p class="sy-text-justify-all sy-red-500">Justify-all RTL</p>
+    </div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
 
 
 
