@@ -15,7 +15,7 @@
 // - `y` for y-axis (both top and bottom)
 // - ` ` (nothing) for all 4 directions
 // 
-// Style guide: 1.2
+// Style guide: 1.3
 
 
 // Margin
@@ -28,7 +28,7 @@
 // <p class="sy-mx-5 sy-blue-500 sy-text-mono">sy-mx-5</p>
 // <p class="sy-mx-0 sy-mt-5 sy-blue-500 sy-text-mono">sy-mx-0 sy-mt-5</p>
 //
-// Style guide: 1.2.1
+// Style guide: 1.3.1
 
 @if $sy-margin-enabled {
   @each $size, $margin in $sy-margin {
@@ -68,7 +68,7 @@
 // <p class="sy-px-5 sy-blue-500 sy-text-mono">sy-px-5</p>
 // <p class="sy-px-0 sy-pt-3 sy-blue-500 sy-text-mono">sy-px-0 sy-pt-3</p>
 //
-// Style guide: 1.2.2
+// Style guide: 1.3.2
 
 @if $sy-padding-enabled {
   @each $size, $padding in $sy-padding {
@@ -111,7 +111,7 @@
 // <div class="sy-w-4 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
 // <div class="sy-w-5 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
 //
-// Style guide: 1.2.3
+// Style guide: 1.3.3
 
 @if $sy-width-enabled {
   @each $size, $width in $sy-width {
@@ -134,7 +134,7 @@
 // <div class="sy-w-3 sy-h-4 sy-m-3 sy-float-left sy-blue-500"></div>
 // <div class="sy-w-3 sy-h-5 sy-m-3 sy-float-left sy-blue-500"></div>
 //
-// Style guide: 1.2.4
+// Style guide: 1.3.4
 
 @if $sy-height-enabled {
   @each $size, $height in $sy-height {
@@ -151,10 +151,10 @@
 // `none`, `left`, `right` or `inherit`.
 //
 // Markup:
-// <div class="sy-w-3 sy-h-3 sy-float-left sy-blue-500"></div>
-// <div class="sy-w-3 sy-h-3 sy-float-right sy-red-500"></div>
+// <div class="sy-float-left sy-w-3 sy-h-3 sy-blue-500"></div>
+// <div class="sy-float-right sy-w-3 sy-h-3 sy-red-500"></div>
 //
-// Style guide: 1.2.5
+// Style guide: 1.3.5
 
 @if $sy-float-enabled {
   .sy-float-left {

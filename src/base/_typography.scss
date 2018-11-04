@@ -13,7 +13,7 @@
 // <p>Paragraph</p>
 // <p class="sy-text-mono">.sy-text-mono</p>
 // 
-// Style guide: 1.3
+// Style guide: 1.2
 
 body {
   font-family: $sy-font-family;
@@ -60,11 +60,9 @@ p {
 // - `.sy-rtl`: Text flows from right to left.
 // - `.sy-ltr`: Text flows from left to right (default).
 // 
-// Hidemarkup: true
-// 
 // Markup: _typography.html
 // 
-// Style guide: 1.3.1
+// Style guide: 1.2.1
 
 .sy-text-start {
   text-align: left;
