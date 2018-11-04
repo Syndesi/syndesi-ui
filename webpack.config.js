@@ -54,7 +54,9 @@ module.exports = {
       destination: './docs',
       css: [
         'http://localhost:8080/main.css'
-      ]
+      ],
+      title: "syndesi-ui",
+      "builder": "./docsTheme"
     })
   ]
 }
