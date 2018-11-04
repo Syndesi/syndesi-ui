@@ -1,11 +1,41 @@
 
 // Color
 //
-// Color generates various general purpose classes for styling elements.
+// Like in Google's material ui, colors are grouped in palettes by hue. Each
+// contains 9 different shades, ranging from `100` (lightest) over `500` (base
+// color) up to `900` (darkest).
 // 
-// Markup: _color.html
+// Some special colors as `white`, `black` and `transparent` are included too,
+// even though they don't have palettes on their own.
+// 
+// Style guide: 1.1
+
+// Foreground
 //
-// Style guide: base
+// Foreground color classes are named as `.sy-text-{color}-{shade}` and just set
+// the required color as the element's color, therefore the text is getting
+// colorized.
+//
+// Markup: _colorForeground.html
+//
+// Style guide: 1.1.1
+
+// Background
+//
+// Background color classes are named as `.sy-{color}-{shade}` and just set the
+// required color as the element's background color.
+//
+// Markup: _colorBackground.html
+//
+// Style guide: 1.1.2
+
+// Available Colors
+// 
+// These are the available colors:
+// 
+// Markup: _colorAvailableColors.html
+//
+// Style guide: 1.1.3
 @if $sy-color-enabled {
   @each $name, $palette in $sy-color {
     @each $step, $color in $palette {
