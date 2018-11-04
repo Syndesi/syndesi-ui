@@ -1,4 +1,32 @@
+// Layout
+//
+// Like Bootstrap Syndesi-UI uses standartized classes for layout propertys like
+// margin, padding and element sizes.
+// 
+// The used directions are as follows:
+// 
+// - `t` for top
+// - `r` for right
+// - `b` for bottom
+// - `l` for left
+// - `x` for x-axis (both left and right)
+// - `y` for y-axis (both top and bottom)
+// - ` ` (nothing) for all 4 directions
+// 
+// Style guide: 1.2
 
+
+// Margin
+//
+// Margin classes are defined as `.sy-m{direction}-{size}`. The size ranges from
+// `0` (smallest) up to `5` (biggest).
+//
+// Markup:
+// <p class="sy-mx-0 sy-mb-5 sy-blue-500 sy-text-mono">sy-mx-0 sy-mb-5</p>
+// <p class="sy-mx-5 sy-blue-500 sy-text-mono">sy-mx-5</p>
+// <p class="sy-mx-0 sy-mt-5 sy-blue-500 sy-text-mono">sy-mx-0 sy-mt-5</p>
+//
+// Style guide: 1.2.1
 
 @if $sy-margin-enabled {
   @each $size, $margin in $sy-margin {
@@ -28,6 +56,18 @@
   }
 }
 
+// Padding
+//
+// Padding classes are defined as `.sy-p{direction}-{size}`. The size ranges from
+// `0` (smallest) up to `5` (biggest).
+//
+// Markup:
+// <p class="sy-px-0 sy-pb-3 sy-blue-500 sy-text-mono">sy-px-0 sy-pb-3</p>
+// <p class="sy-px-5 sy-blue-500 sy-text-mono">sy-px-5</p>
+// <p class="sy-px-0 sy-pt-3 sy-blue-500 sy-text-mono">sy-px-0 sy-pt-3</p>
+//
+// Style guide: 1.2.2
+
 @if $sy-padding-enabled {
   @each $size, $padding in $sy-padding {
     .sy-pt-#{$size} {
@@ -56,6 +96,21 @@
   }
 }
 
+// Width
+//
+// Width classes are defined as `.sy-w-{size}`. The size ranges from
+// `0` (smallest) up to `5` (biggest).
+//
+// Markup:
+// <div class="sy-w-0 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-1 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-2 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-3 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-4 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-5 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
+//
+// Style guide: 1.2.3
+
 @if $sy-width-enabled {
   @each $size, $width in $sy-width {
     .sy-w-#{$size} {
@@ -64,10 +119,52 @@
   }
 }
 
+// Height
+//
+// Height classes are defined as `.sy-h-{size}`. The size ranges from
+// `0` (smallest) up to `5` (biggest).
+//
+// Markup:
+// <div class="sy-w-3 sy-h-0 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-3 sy-h-1 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-3 sy-h-2 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-3 sy-h-3 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-3 sy-h-4 sy-m-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-3 sy-h-5 sy-m-3 sy-float-left sy-blue-500"></div>
+//
+// Style guide: 1.2.4
+
 @if $sy-height-enabled {
   @each $size, $height in $sy-height {
     .sy-h-#{$size} {
       height: $height;
     }
+  }
+}
+
+
+// Float
+//
+// The float classes are defined as `.sy-float-{value}`. The value can be
+// `none`, `left`, `right` or `inherit`.
+//
+// Markup:
+// <div class="sy-w-3 sy-h-3 sy-float-left sy-blue-500"></div>
+// <div class="sy-w-3 sy-h-3 sy-float-right sy-red-500"></div>
+//
+// Style guide: 1.2.5
+
+@if $sy-float-enabled {
+  .sy-float-left {
+    float: left;
+  }
+  .sy-float-right {
+    float: right;
+  }
+  .sy-float-none {
+    float: none;
+  }
+  .sy-float-inherit {
+    float: inherit;
   }
 }
