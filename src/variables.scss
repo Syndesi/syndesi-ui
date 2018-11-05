@@ -140,6 +140,7 @@ $sy-color: sy-generate-color-palette($sy-color-hue, $sy-color-modifier);
 //  typography: text, heading, quotes, code etc.
 // -----------------------------------------------------------------------------
 
+$sy-include-google-font:   true;
 $sy-font-family:           'Roboto';
 $sy-font-family-mono:      'Roboto mono';
 $sy-fontscale:             1.200;
