@@ -1,4 +1,37 @@
 // -----------------------------------------------------------------------------
+//  color: primary, secondary, shadow, gradient, ...
+// -----------------------------------------------------------------------------
+
+$sy-color-enabled: true;
+$sy-color-hue: (
+  blue:     215,
+  purple:   270,
+  magenta:  305,
+  red:      355,
+  orange:    30,
+  yellow:    60,
+  green:    115,
+  teal:     180,
+  gray:    null
+);
+$sy-color-modifier: (
+  100: (s: 80, l: 88),
+  200: (s: 82, l: 78),
+  300: (s: 85, l: 68),
+  400: (s: 82, l: 58),
+  500: (s: 80, l: 50),
+  600: (s: 82, l: 42),
+  700: (s: 85, l: 32),
+  800: (s: 82, l: 22),
+  900: (s: 80, l: 12)
+);
+
+$sy-color: sy-generate-color-palette($sy-color-hue, $sy-color-modifier);
+$sy-color-primary: map-get(map-get($sy-color, 'blue'), '500');
+$sy-color-secondary: map-get(map-get($sy-color, 'red'), '500');
+
+
+// -----------------------------------------------------------------------------
 //  layout: margin, padding, breakpoint (responsive)
 // -----------------------------------------------------------------------------
 
@@ -96,44 +129,10 @@ $sy-container-default-gap: map-get($sy-grid-gap, 0);
 
 $sy-border-enabled: true;
 $sy-border-style: solid;
-$sy-border-width: 1px;
-$sy-border-color: #123456;
+$sy-border-color: map-get(map-get($sy-color, 'gray'), '500');
 $sy-border-radius-enabled: true;
-$sy-border-radius: map-get($sy-padding, 2);
-
-
-// -----------------------------------------------------------------------------
-//  color: primary, secondary, shadow, gradient, ...
-// -----------------------------------------------------------------------------
-
-$sy-color-primary: 'reference to the color map with shades';
-$sy-color-secondary: 'reference to the color map with shades';
-
-$sy-color-enabled: true;
-$sy-color-hue: (
-  blue:     215,
-  purple:   270,
-  magenta:  305,
-  red:      355,
-  orange:    30,
-  yellow:    60,
-  green:    115,
-  teal:     180,
-  gray:    null
-);
-$sy-color-modifier: (
-  100: (s: 80, l: 88),
-  200: (s: 82, l: 78),
-  300: (s: 85, l: 68),
-  400: (s: 82, l: 58),
-  500: (s: 80, l: 50),
-  600: (s: 82, l: 42),
-  700: (s: 85, l: 32),
-  800: (s: 82, l: 22),
-  900: (s: 80, l: 12)
-);
-
-$sy-color: sy-generate-color-palette($sy-color-hue, $sy-color-modifier);
+$sy-border-radius: map-get($sy-padding, 1);
+$sy-border-width: 1px;
 
 
 // -----------------------------------------------------------------------------
