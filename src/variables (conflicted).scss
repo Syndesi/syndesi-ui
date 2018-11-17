@@ -1,0 +1,213 @@
+// -----------------------------------------------------------------------------
+//  color: primary, secondary, shadow, gradient, ...
+// -----------------------------------------------------------------------------
+
+$sy-color-enabled: true;
+$sy-color-hue: (
+  blue:     215,
+  purple:   270,
+  magenta:  305,
+  red:      355,
+  orange:    30,
+  yellow:    60,
+  green:    115,
+  teal:     180,
+  gray:    null
+);
+$sy-color-modifier: (
+  100: (s: 80, l: 88),
+  200: (s: 82, l: 78),
+  300: (s: 85, l: 68),
+  400: (s: 82, l: 58),
+  500: (s: 80, l: 50),
+  600: (s: 82, l: 42),
+  700: (s: 85, l: 32),
+  800: (s: 82, l: 22),
+  900: (s: 80, l: 12)
+);
+$sy-color-palette: sy-generate-color-palette($sy-color-hue, $sy-color-modifier);
+$sy-color-special: (
+  black:       #000,
+  white:       #fff,
+  transparent: transparent,
+  primary:     map-get($sy-color-palette, blue-500),
+  secondary:   map-get($sy-color-palette, purple-500),
+  success:     map-get($sy-color-palette, green-500),
+  danger:      map-get($sy-color-palette, red-500),
+  warning:     map-get($sy-color-palette, yellow-500),
+  info:        map-get($sy-color-palette, teal-500)
+);
+$sy-color-all: map-merge($sy-color-palette, $sy-color-special);
+
+
+// -----------------------------------------------------------------------------
+//  layout: margin, padding, breakpoint (responsive)
+// -----------------------------------------------------------------------------
+
+$sy-breakpoint: (
+  xs:    0,
+  sm:  640px,
+  md:  960px,
+  lg: 1200px,
+  xl: 1600px
+) !default;
+
+$sy-base-space: 1rem !default;
+
+// padding
+$sy-padding-enabled: true;
+$sy-base-padding: $sy-base-space * 1.0;
+$sy-padding: (
+  0: 0,
+  1: ($sy-base-padding * 0.25),
+  2: ($sy-base-padding * 0.50),
+  3: ($sy-base-padding * 1.00),
+  4: ($sy-base-padding * 1.50),
+  5: ($sy-base-padding * 3.00)
+) !default;
+
+// margin
+$sy-margin-enabled: true;
+$sy-base-margin: $sy-base-space * 1.0;
+$sy-margin: (
+  0: 0,
+  1: ($sy-base-margin * 0.25),
+  2: ($sy-base-margin * 0.50),
+  3: ($sy-base-margin * 1.00),
+  4: ($sy-base-margin * 1.50),
+  5: ($sy-base-margin * 3.00)
+) !default;
+
+// width
+$sy-width-enabled: true;
+$sy-base-width: $sy-base-space * 1.0;
+$sy-width: (
+  0: 0,
+  1: ($sy-base-width * 0.25),
+  2: ($sy-base-width * 0.50),
+  3: ($sy-base-width * 1.00),
+  4: ($sy-base-width * 1.50),
+  5: ($sy-base-width * 3.00)
+) !default;
+
+// height
+$sy-height-enabled: true;
+$sy-base-height: $sy-base-space * 1.0;
+$sy-height: (
+  0: 0,
+  1: ($sy-base-height * 0.25),
+  2: ($sy-base-height * 0.50),
+  3: ($sy-base-height * 1.00),
+  4: ($sy-base-height * 1.50),
+  5: ($sy-base-height * 3.00)
+) !default;
+
+$sy-float-enabled: true;
+
+
+// -----------------------------------------------------------------------------
+//  grid: container, columns, gap
+// -----------------------------------------------------------------------------
+
+$sy-grid-enabled: true;
+$sy-grid-columns: 12 !default;
+$sy-grid-base-gap: $sy-base-space * 1.0;
+$sy-grid-gap: (
+  0: 0,
+  1: ($sy-grid-base-gap * 0.25),
+  2: ($sy-grid-base-gap * 0.50),
+  3: ($sy-grid-base-gap * 1.00),
+  4: ($sy-grid-base-gap * 1.50),
+  5: ($sy-grid-base-gap * 3.00)
+) !default;
+$sy-grid-default-gap: map-get($sy-grid-gap, 2);
+
+$sy-container-enabled: true;
+$sy-container-max-width: (
+  sm: (map-get($sy-breakpoint, 'sm') * 1.00),
+  md: (map-get($sy-breakpoint, 'md') * 0.90),
+  lg: (map-get($sy-breakpoint, 'lg') * 0.80),
+  xl: (map-get($sy-breakpoint, 'xl') * 0.70)
+) !default;
+$sy-container-default-gap: map-get($sy-grid-gap, 0);
+
+
+// -----------------------------------------------------------------------------
+//  border: style, width, radius
+// -----------------------------------------------------------------------------
+
+$sy-border-enabled: true;
+$sy-border-style: solid;
+$sy-border-color: sy-color(gray-500);
+$sy-border-radius-enabled: true;
+$sy-border-radius: map-get($sy-padding, 1);
+$sy-border-width: 1px;
+
+
+// -----------------------------------------------------------------------------
+//  typography: text, heading, quotes, code etc.
+// -----------------------------------------------------------------------------
+
+$sy-include-google-font:   true;
+$sy-font-family:           'Roboto';
+$sy-font-family-mono:      'Roboto mono';
+$sy-fontscale:             1.200;
+$sy-fontscale-display:     1.200;
+$sy-base-fontsize:         1rem;
+$sy-base-fontsize-display: $sy-base-fontsize * 3;
+$sy-fontsize: (
+  heading-1: $sy-base-fontsize         * pow($sy-fontscale,          4),
+  heading-2: $sy-base-fontsize         * pow($sy-fontscale,          3),
+  heading-3: $sy-base-fontsize         * pow($sy-fontscale,          2),
+  heading-4: $sy-base-fontsize         * pow($sy-fontscale,          1),
+  heading-5: $sy-base-fontsize         * pow($sy-fontscale,          0),
+  heading-6: $sy-base-fontsize         * pow($sy-fontscale,         -1),
+  paragraph: $sy-base-fontsize         * pow($sy-fontscale,          0),
+  small-1:   $sy-base-fontsize         * pow($sy-fontscale,         -2),
+  small-2:   $sy-base-fontsize         * pow($sy-fontscale,         -3),
+  display-1: $sy-base-fontsize-display * pow($sy-fontscale-display,  3),
+  display-2: $sy-base-fontsize-display * pow($sy-fontscale-display,  2),
+  display-3: $sy-base-fontsize-display * pow($sy-fontscale-display,  1),
+  display-4: $sy-base-fontsize-display * pow($sy-fontscale-display,  0)
+);
+$sy-lineheight-base:      1;
+$sy-lineheight-heading:   $sy-lineheight-base * pow($sy-fontscale, 1);
+$sy-lineheight-display:   $sy-lineheight-base * pow($sy-fontscale, 1);
+$sy-lineheight-paragraph: $sy-lineheight-base * pow($sy-fontscale, 2);
+$sy-fontweight-heading:   300;
+$sy-fontweight-display:   300;
+$sy-fontweight-paragraph: 400;
+
+// -----------------------------------------------------------------------------
+//  components: settings for individual components
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//  media: block with optional aspect ratio and offset elements
+// -----------------------------------------------------------------------------
+
+$sy-media-enabled: true;
+$sy-media-base-offset: $sy-base-space * 1.0;
+$sy-media-offset: (
+  n5: ($sy-media-base-offset * -3.00),
+  n4: ($sy-media-base-offset * -1.50),
+  n3: ($sy-media-base-offset * -1.00),
+  n2: ($sy-media-base-offset * -0.50),
+  n1: ($sy-media-base-offset * -0.25),
+   0: 0,
+   1: ($sy-media-base-offset *  0.25),
+   2: ($sy-media-base-offset *  0.50),
+   3: ($sy-media-base-offset *  1.00),
+   4: ($sy-media-base-offset *  1.50),
+   5: ($sy-media-base-offset *  3.00)
+) !default;
+$sy-media-ratio: (
+  "9-18": 100% /  (9 / 18),
+  "9-16": 100% /  (9 / 16),
+  "3-4":  100% /  (3 /  4),
+  "1-1":  100% /  (1 /  1),
+  "4-3":  100% /  (4 /  3),
+  "16-9": 100% / (16 /  9),
+  "18-9": 100% / (18 /  9)
+) !default;

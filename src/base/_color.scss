@@ -17,8 +17,8 @@
 // colorized.
 //
 // Markup:
-// <p class="sy-text-blue-500">Blue text.</p>
-// <p class="sy-text-red-500">Red text.</p>
+// <p class="sy-text-primary">Primary text.</p>
+// <p class="sy-text-secondary">Secondary text.</p>
 // <p class="sy-text-gray-500">Gray text.</p>
 //
 // Style guide: 1.1.1
@@ -29,8 +29,8 @@
 // required color as the element's background color.
 //
 // Markup:
-// <p class="sy-blue-500 sy-text-white">Blue background.</p>
-// <p class="sy-red-500 sy-text-white">Red background.</p>
+// <p class="sy-primary sy-text-white">Primary background.</p>
+// <p class="sy-secondary sy-text-white">Secondary background.</p>
 // <p class="sy-gray-500 sy-text-white">Gray background.</p>
 //
 // Style guide: 1.1.2
@@ -47,14 +47,14 @@
 @if $sy-color-enabled {
   @each $name, $color in $sy-color-all {
     .sy-#{$name} {
-      background-color: $color;
+      background-color: $color !important;
     }
     .sy-text-#{$name} {
-      color: $color;
+      color: $color !important;
     }
     @if $sy-border-enabled {
       .sy-border-#{$name} {
-        border-color: $color;
+        border-color: $color !important;
       }
     }
   }
