@@ -1,0 +1,25 @@
+// Border
+//
+// Borders are borders, WIP
+// 
+// Style guide: 1.6.0
+
+
+$border: 1px solid $sy-border-color;
+.sy-border {
+    border: $border;
+}
+
+.sy-border-top {
+    border-top: $border;
+}
+.sy-border-right {
+    border-right: $border;
+}
+.sy-border-bottom {
+    border-bottom: $border;
+}
+.sy-border-left {
+    border-left: $border;
+}
+

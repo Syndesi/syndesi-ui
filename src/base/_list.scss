@@ -1,0 +1,59 @@
+// List
+//
+// A list is just a list which can be styled as a card.
+// 
+// Markup: _list.html
+// 
+// Style guide: 1.5.0
+
+
+.sy-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    > * {
+        width: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border-style: solid;
+        border-width: 0px;
+        border-left-width: $sy-border-width;
+        border-right-width: $sy-border-width;
+        border-color: $sy-border-color;
+        &.sy-dynamic {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+    }
+    > *:first-child {
+        border-top-width: $sy-border-width;
+    }
+    > *:last-child {
+        border-bottom-width: $sy-border-width;
+    }
+    @if $sy-border-radius-enabled {
+        > *:first-child {
+            border-top-left-radius: $sy-border-radius;
+            border-top-right-radius: $sy-border-radius;
+        }
+        > *:last-child {
+            border-bottom-left-radius: $sy-border-radius;
+            border-bottom-right-radius: $sy-border-radius;
+        }
+    }
+    &.sy-list-no-border {
+        > * {
+            border-width: 0px;
+        }
+    }
+    &.sy-list-no-border-radius {
+        > *:first-child {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+        > *:last-child {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+}
