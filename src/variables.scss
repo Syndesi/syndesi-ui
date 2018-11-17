@@ -25,10 +25,19 @@ $sy-color-modifier: (
   800: (s: 82, l: 22),
   900: (s: 80, l: 12)
 );
-
-$sy-color: sy-generate-color-palette($sy-color-hue, $sy-color-modifier);
-$sy-color-primary: map-get(map-get($sy-color, 'blue'), '500');
-$sy-color-secondary: map-get(map-get($sy-color, 'red'), '500');
+$sy-color-palette: sy-generate-color-palette($sy-color-hue, $sy-color-modifier);
+$sy-color-special: (
+  black:       #000,
+  white:       #fff,
+  transparent: transparent,
+  primary:     map-get($sy-color-palette, blue-500),
+  secondary:   map-get($sy-color-palette, red-500),
+  success:     map-get($sy-color-palette, green-500),
+  danger:      map-get($sy-color-palette, red-500),
+  warning:     map-get($sy-color-palette, yellow-500),
+  info:        map-get($sy-color-palette, teal-500)
+);
+$sy-color-all: map-merge($sy-color-palette, $sy-color-special);
 
 
 // -----------------------------------------------------------------------------
@@ -129,7 +138,7 @@ $sy-container-default-gap: map-get($sy-grid-gap, 0);
 
 $sy-border-enabled: true;
 $sy-border-style: solid;
-$sy-border-color: map-get(map-get($sy-color, 'gray'), '500');
+$sy-border-color: sy-color(gray-500);
 $sy-border-radius-enabled: true;
 $sy-border-radius: map-get($sy-padding, 1);
 $sy-border-width: 1px;

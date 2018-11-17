@@ -45,32 +45,17 @@
 //
 // Style guide: 1.1.3
 @if $sy-color-enabled {
-  @each $name, $palette in $sy-color {
-    @each $step, $color in $palette {
-      .sy-text-#{$name}-#{$step} {
-        color: $color;
-      }
-      .sy-#{$name}-#{$step} {
-        background-color: $color;
+  @each $name, $color in $sy-color-all {
+    .sy-#{$name} {
+      background-color: $color;
+    }
+    .sy-text-#{$name} {
+      color: $color;
+    }
+    @if $sy-border-enabled {
+      .sy-border-#{$name} {
+        border-color: $color;
       }
     }
-  }
-  .sy-text-white {
-    color: #fff;
-  }
-  .sy-white {
-    background-color: #fff;
-  }
-  .sy-text-black {
-    color: #000;
-  }
-  .sy-black {
-    background-color: #000;
-  }
-  .sy-text-transparent {
-    color: transparent;
-  }
-  .sy-transparent {
-    background-color: transparent;
   }
 }
